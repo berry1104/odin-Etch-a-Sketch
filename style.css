@@ -2,7 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    width: 512px;
+    width: 600px;
+    height: 600px;
 
     justify-content: center;
     align-items: center;
@@ -10,10 +11,12 @@
         
 }
 
-.grid-item {
-    width: 30px;
-    height: 30px;
-    border: 1px solid black;
+.cell {
+    width: calc(600px / var(--items-per-row));
+    height: calc(600px / var(--items-per-row));
+    box-sizing: border-box;
+    border: 0.3px solid black; /* Optional, for visual */
+    background-color: #f2f0f0;
 }
 
 
