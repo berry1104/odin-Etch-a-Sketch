@@ -1,0 +1,29 @@
+#grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 512px;
+
+    justify-content: center;
+    align-items: center;
+
+        
+}
+
+.grid-item {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
