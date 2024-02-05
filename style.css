@@ -1,19 +1,61 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    
+}
+
+
+h1 {
+    background-color: pink;
+    margin: 0;
+}
+
+.main {
+    display: flex;
+    height: 100vh; /* This ensures that the .main div takes up the full viewport height */
+    flex: 1; /* Removed as this is not a valid property for flex container */
+}
+
+.sidebar {
+    width: 300px; /* Fixed width for the sidebar */
+    background: royalblue;
+    flex-shrink: 0; /* Prevents the sidebar from shrinking */
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+button {
+    width:100px;
+}
+
+.content {
+    display: flex;
+    flex-grow: 1; /* This will allow .content to take up the remaining space */
+    justify-content: center; /* Centers #grid-container horizontally */
+    align-items: center; /* Centers #grid-container vertically */
+}
+
 #grid-container {
+    width: 600px; /* Fixed width as requested */
+    height: 600px; /* Fixed height as requested */
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    width: 600px;
-    height: 600px;
-
-    justify-content: center;
-    align-items: center;
-
-        
+    background-color: #f2f0f0; /* As previously defined */
 }
 
 .cell {
-    width: calc(600px / var(--items-per-row));
-    height: calc(600px / var(--items-per-row));
+    width: calc(600px / var(--items-per-row)); /* Adjust based on your grid cells */
+    height: calc(600px / var(--items-per-row)); /* Adjust based on your grid cells */
     box-sizing: border-box;
     border: 0.3px solid black; /* Optional, for visual */
     background-color: #f2f0f0;
@@ -21,12 +63,5 @@
 
 
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
-}
+
+
